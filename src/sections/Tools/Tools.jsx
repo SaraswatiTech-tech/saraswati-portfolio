@@ -12,7 +12,7 @@ const toolIcons = {
 
 export default function Tools() {
   return (
-    <Section id="tools" className="bg-slate-950/30">
+    <Section id="tools" className="bg-section-alt">
       <SectionHeader
         label="Stack"
         title="Tools & Technologies"
@@ -36,12 +36,14 @@ export default function Tools() {
                   <span className="text-xs font-bold text-purple-400">TNG</span>
                 ) : tool.icon === 'sql' ? (
                   <span className="text-xs font-bold text-teal-400">SQL</span>
+                ) : tool.icon === 'playwright' ? (
+                  <span className="text-xs font-bold text-green-400">PW</span>
                 ) : (
-                  Icon && <Icon className="w-5 h-5 text-slate-300" />
+                  Icon && <Icon className="w-5 h-5 text-theme-secondary" />
                 )}
               </div>
-              <p className="text-sm font-semibold text-slate-200">{tool.name}</p>
-              <p className="text-[10px] text-slate-500 mt-1">{tool.category}</p>
+              <p className="text-sm font-semibold text-theme-primary">{tool.name}</p>
+              <p className="text-[10px] text-theme-muted mt-1">{tool.category}</p>
             </motion.div>
           )
         })}

@@ -81,7 +81,7 @@ function CategoryCard({ category, icon, skills, index }) {
 
 export default function Skills() {
   return (
-    <Section id="skills" className="skills-section bg-slate-950/30">
+    <Section id="skills" className="skills-section bg-section-alt">
       <SectionHeader
         label="Expertise"
         title="Technical Skills"

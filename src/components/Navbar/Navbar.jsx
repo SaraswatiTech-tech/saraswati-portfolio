@@ -56,9 +56,9 @@ function Logo({ onNavigate }) {
 
       <div className="min-w-0">
 
-        <span className="text-white font-semibold text-sm leading-tight block truncate">Saraswati</span>
+        <span className="text-theme-primary font-semibold text-sm leading-tight block truncate">Saraswati</span>
 
-        <span className="text-xs text-slate-400 truncate block">Software Test Engineer</span>
+        <span className="text-xs text-theme-secondary truncate block">Software Test Engineer</span>
 
       </div>
 
@@ -82,7 +82,7 @@ function NavLink({ label, href, id, isActive, onClick }) {
 
       className={`relative text-sm font-medium pb-1 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded ${
 
-        isActive ? 'text-blue-400' : 'text-slate-400 hover:text-slate-200'
+        isActive ? 'text-blue-400' : 'text-theme-secondary hover:text-theme-primary'
 
       }`}
 
@@ -214,7 +214,7 @@ export default function Navbar() {
 
             type="button"
 
-            className="lg:hidden w-10 h-10 rounded-xl border border-white/10 flex items-center justify-center text-slate-300 hover:border-blue-500/30 transition-colors"
+            className="nav-menu-btn lg:hidden w-10 h-10 rounded-xl flex items-center justify-center"
 
             onClick={() => setOpen(!open)}
 
@@ -246,7 +246,7 @@ export default function Navbar() {
 
             exit={{ opacity: 0, height: 0 }}
 
-            className="lg:hidden border-t border-white/5 bg-[#020617]/98 backdrop-blur-md overflow-hidden"
+            className="lg:hidden border-t border-theme-border bg-theme-mobile-menu backdrop-blur-md overflow-hidden"
 
           >
 
@@ -266,7 +266,7 @@ export default function Navbar() {
 
                       className={`block py-3 px-2 text-sm font-medium rounded-lg transition-colors ${
 
-                        active === link.id ? 'text-blue-400 bg-blue-500/10' : 'text-slate-400 hover:text-white'
+                        active === link.id ? 'text-blue-400 bg-blue-500/10' : 'text-theme-secondary hover:text-theme-primary'
 
                       }`}
 
@@ -279,6 +279,10 @@ export default function Navbar() {
                   </li>
 
                 ))}
+
+                <li className="flex justify-center py-2">
+                  <ThemeToggle />
+                </li>
 
                 <li className="pt-2">
 

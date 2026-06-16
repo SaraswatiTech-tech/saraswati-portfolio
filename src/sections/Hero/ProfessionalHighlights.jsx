@@ -24,11 +24,11 @@ function HighlightCard({ value, suffix, label, desc, color, icon, index }) {
       >
         <Icon className="w-4 h-4" aria-hidden="true" />
       </div>
-      <p className="text-2xl font-bold text-white mb-0.5">
+      <p className="text-2xl font-bold text-theme-primary mb-0.5">
         <AnimatedCounter value={value} suffix={suffix} />
       </p>
-      <p className="text-xs font-semibold text-slate-300 mb-1">{label}</p>
-      <p className="text-[10px] text-slate-500 leading-snug">{desc}</p>
+      <p className="text-xs font-semibold text-theme-secondary mb-1">{label}</p>
+      <p className="text-[10px] text-theme-muted leading-snug">{desc}</p>
     </motion.div>
   )
 }

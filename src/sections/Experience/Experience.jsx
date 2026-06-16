@@ -108,7 +108,7 @@ function ExperienceCard({ job, index, isLast }) {
 
 export default function Experience() {
   return (
-    <Section id="experience" className="experience-section bg-slate-950/30">
+    <Section id="experience" className="experience-section bg-section-alt">
       <SectionHeader
         label="Career"
         title="Experience"

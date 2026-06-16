@@ -24,7 +24,7 @@ export const heroData = {
 }
 
 export const highlights = [
-  { value: 25, suffix: '+', label: 'Projects Tested', desc: 'End-to-end across web & API', color: '#3b82f6', icon: 'clipboard' },
+  { value: 4, suffix: '+', label: 'Projects Tested', desc: 'End-to-end across web & API', color: '#3b82f6', icon: 'clipboard' },
   { value: 1500, suffix: '+', label: 'Test Cases Created', desc: 'Functional & regression coverage', color: '#22c55e', icon: 'document' },
   { value: 800, suffix: '+', label: 'Bugs Reported', desc: 'Critical defects caught early', color: '#ef4444', icon: 'bug' },
   { value: 300, suffix: '+', label: 'Automation Scripts', desc: 'Selenium & TestNG frameworks', color: '#8b5cf6', icon: 'code' },
@@ -59,6 +59,7 @@ export const dashboardStats = [
 export const techTools = [
   { name: 'Java', icon: 'java', category: 'Language' },
   { name: 'Selenium', icon: 'selenium', category: 'Automation' },
+  { name: 'Playwright', icon: 'playwright', category: 'Automation' },
   { name: 'TestNG', icon: 'testng', category: 'Framework' },
   { name: 'Postman', icon: 'postman', category: 'API' },
   { name: 'MySQL', icon: 'mysql', category: 'Database' },
@@ -97,7 +98,7 @@ export const aboutData = {
   stats: [
     { value: 1, suffix: '+', label: 'Year Experience', icon: 'experience', color: '#3b82f6' },
     { value: 100, suffix: '+', label: 'Bugs Reported & Verified', icon: 'bugs', color: '#ef4444' },
-    { value: 10, suffix: '+', label: 'Projects Tested', icon: 'projects', color: '#22c55e' },
+    { value: 4, suffix: '+', label: 'Projects Tested', icon: 'projects', color: '#22c55e' },
     { value: 100, suffix: '%', label: 'Attention to Detail', icon: 'detail', color: '#8b5cf6' },
   ],
 }
@@ -352,7 +353,7 @@ export const certifications = [
     id: 'generative-ai',
     name: 'Generative AI',
     issuer: 'Professional Certification',
-    year: '2025',
+    year: '2026',
     color: '#8b5cf6',
     image: '/certificates/generative-ai.png',
     downloadUrl: '/certificates/generative-ai.png',
@@ -361,7 +362,7 @@ export const certifications = [
     id: 'mern-fullstack',
     name: 'MERN Full Stack Development',
     issuer: 'Professional Certification',
-    year: '2025',
+    year: '2024',
     color: '#3b82f6',
     image: '/certificates/mern-fullstack.png',
     downloadUrl: '/certificates/mern-fullstack.png',
@@ -370,7 +371,7 @@ export const certifications = [
     id: 'automation-test-intern',
     name: 'Automation Test Engineer Intern',
     issuer: 'Professional Certification',
-    year: '2025',
+    year: '2026',
     color: '#22c55e',
     image: '/certificates/automation-test-intern.png',
     downloadUrl: '/certificates/automation-test-intern.png',
@@ -389,7 +390,7 @@ export const certifications = [
 
 export const contactInfo = {
   email: 'shingesaraswati1@gmail.com',
-  phone: '+91 98765 43210',
+  phone: '+91 82962 50284',
   location: 'India',
   availability: 'Open to opportunities',
 }

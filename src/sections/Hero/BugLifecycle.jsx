@@ -31,7 +31,7 @@ function TimelineStep({ label, desc, color, icon, index, isLast }) {
         )}
         <motion.div
           whileHover={{ scale: 1.1 }}
-          className="relative z-10 w-10 h-10 rounded-full flex items-center justify-center border border-white/10 mx-auto shrink-0"
+          className="relative z-10 w-10 h-10 rounded-full flex items-center justify-center border border-theme-border mx-auto shrink-0"
           style={{
             background: `linear-gradient(135deg, ${color}30, ${color}10)`,
             color,
@@ -41,8 +41,8 @@ function TimelineStep({ label, desc, color, icon, index, isLast }) {
           <Icon className="w-4 h-4" aria-hidden="true" />
         </motion.div>
       </div>
-      <p className="text-[11px] font-semibold text-slate-200 mt-2 leading-tight text-center">{label}</p>
-      <p className="text-[9px] text-slate-500 leading-snug text-center mt-0.5 px-0.5 hidden sm:block">{desc}</p>
+      <p className="text-[11px] font-semibold text-theme-primary mt-2 leading-tight text-center">{label}</p>
+      <p className="text-[9px] text-theme-muted leading-snug text-center mt-0.5 px-0.5 hidden sm:block">{desc}</p>
     </motion.li>
   )
 }
@@ -61,8 +61,8 @@ export default function BugLifecycle() {
         </ol>
         <div className="sm:hidden mt-2 flex flex-col gap-1">
           {bugLifecycle.map((step) => (
-            <p key={step.label} className="text-[10px] text-slate-500">
-              <span className="text-slate-400 font-medium">{step.label}:</span> {step.desc}
+            <p key={step.label} className="text-[10px] text-theme-muted">
+              <span className="text-theme-secondary font-medium">{step.label}:</span> {step.desc}
             </p>
           ))}
         </div>

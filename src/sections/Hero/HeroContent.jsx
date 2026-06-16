@@ -15,7 +15,7 @@ export default function HeroContent() {
   const skillsLine = heroData.skills.join(' · ')
 
   return (
-    <div className="flex flex-col justify-center w-full min-w-0">
+    <div className="flex flex-col justify-start w-full min-w-0">
       <motion.span {...fadeUp(0)} className="qa-badge inline-flex items-center gap-2 w-fit mb-5">
         <span className="w-2 h-2 rounded-full bg-green-400 shadow-[0_0_8px_#22c55e] animate-pulse" aria-hidden="true" />
         {heroData.badge}
@@ -28,19 +28,19 @@ export default function HeroContent() {
       <motion.div {...fadeUp(0.14)} className="flex items-center gap-3 mb-4">
         <span className="experience-pill">
           <span className="font-bold text-blue-400">{heroData.yearsExperience}+</span>
-          <span className="text-slate-400"> Years Experience</span>
+          <span className="text-theme-secondary"> Years Experience</span>
         </span>
       </motion.div>
 
-      <motion.p {...fadeUp(0.2)} className="text-sm sm:text-base text-slate-400 mb-3 leading-relaxed font-medium">
+      <motion.p {...fadeUp(0.2)} className="text-sm sm:text-base text-theme-secondary mb-3 leading-relaxed font-medium">
         {skillsLine}
       </motion.p>
 
-      <motion.p {...fadeUp(0.26)} className="text-sm text-slate-400 leading-relaxed mb-4 max-w-lg">
+      <motion.p {...fadeUp(0.26)} className="text-sm text-theme-secondary leading-relaxed mb-4 max-w-lg">
         {heroData.summary}
       </motion.p>
 
-      <motion.p {...fadeUp(0.32)} className="text-xs text-slate-500 leading-relaxed mb-8 max-w-md">
+      <motion.p {...fadeUp(0.32)} className="text-xs text-theme-muted leading-relaxed mb-8 max-w-md">
         {heroData.bio}
       </motion.p>
 
@@ -58,7 +58,7 @@ export default function HeroContent() {
           href="#contact"
           whileHover={{ scale: 1.03 }}
           whileTap={{ scale: 0.97 }}
-          className="btn-outline flex items-center gap-2 px-6 py-3 rounded-xl text-slate-200 font-semibold text-sm"
+          className="btn-outline flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm"
         >
           <FiMessageCircle className="w-4 h-4" aria-hidden="true" />
           Contact Me
@@ -68,7 +68,7 @@ export default function HeroContent() {
           download={resumeFile.downloadName}
           whileHover={{ scale: 1.03 }}
           whileTap={{ scale: 0.97 }}
-          className="btn-ghost flex items-center gap-2 px-5 py-3 rounded-xl text-slate-300 font-medium text-sm"
+          className="btn-ghost flex items-center gap-2 px-5 py-3 rounded-xl font-medium text-sm"
         >
           <FiDownload className="w-4 h-4" aria-hidden="true" />
           Resume
@@ -87,7 +87,7 @@ export default function HeroContent() {
               aria-label={label}
               role="listitem"
               whileHover={{ y: -3, scale: 1.05 }}
-              className="social-icon-btn w-11 h-11 rounded-xl flex items-center justify-center text-slate-300"
+              className="social-icon-btn w-11 h-11 rounded-xl flex items-center justify-center"
             >
               <Icon className="w-4 h-4" />
             </motion.a>

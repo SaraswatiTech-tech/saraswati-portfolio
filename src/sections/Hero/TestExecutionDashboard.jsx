@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import {
-  FiBarChart2, FiClipboard, FiCheckCircle, FiXCircle, FiMinusCircle, FiClock, FiChevronDown,
+  FiBarChart2, FiClipboard, FiCheckCircle, FiXCircle, FiMinusCircle, FiClock,
 } from 'react-icons/fi'
 import { FaJava } from 'react-icons/fa6'
 import { SiSelenium, SiPostman, SiMysql, SiGit } from 'react-icons/si'
@@ -23,11 +23,13 @@ function ToolItem({ name, icon }) {
           <span className="text-[9px] font-bold text-purple-400">TNG</span>
         ) : icon === 'sql' ? (
           <span className="text-[9px] font-bold text-teal-400">SQL</span>
+        ) : icon === 'playwright' ? (
+          <span className="text-[9px] font-bold text-green-400">PW</span>
         ) : (
-          Icon && <Icon className="w-4 h-4 text-slate-300" />
+          Icon && <Icon className="w-4 h-4 text-theme-secondary" />
         )}
       </div>
-      <span className="text-[9px] text-slate-500 whitespace-nowrap">{name}</span>
+      <span className="text-[9px] text-theme-muted whitespace-nowrap">{name}</span>
     </motion.div>
   )
 }
@@ -39,14 +41,6 @@ export default function TestExecutionDashboard() {
     <Card hover className="dashboard-glow">
       <CardHeader>
         <CardTitle icon={FiBarChart2}>Test Execution Dashboard</CardTitle>
-        <button
-          type="button"
-          aria-label="Filter by time period"
-          className="flex items-center gap-1 text-xs text-slate-400 bg-white/5 px-3 py-1.5 rounded-lg border border-white/10 shrink-0 hover:border-blue-500/30 transition-colors"
-        >
-          This Month
-          <FiChevronDown className="w-3 h-3" aria-hidden="true" />
-        </button>
       </CardHeader>
 
       <CardBody className="flex flex-col gap-5">
@@ -69,8 +63,8 @@ export default function TestExecutionDashboard() {
                 >
                   <Icon className="w-4 h-4" aria-hidden="true" />
                 </div>
-                <p className="text-[9px] text-slate-500 mb-1 leading-tight uppercase tracking-wide">{label}</p>
-                <p className="text-base font-bold leading-none" style={{ color: key === 'total' ? '#e2e8f0' : color }}>
+                <p className="text-[9px] text-theme-muted mb-1 leading-tight uppercase tracking-wide">{label}</p>
+                <p className="text-base font-bold leading-none" style={{ color: key === 'total' ? 'var(--theme-text-primary)' : color }}>
                   <AnimatedCounter value={dashboardMetrics[key]} />
                 </p>
               </motion.div>
@@ -78,14 +72,14 @@ export default function TestExecutionDashboard() {
           })}
         </div>
 
-        <div className="rounded-xl bg-slate-900/50 border border-white/5 p-4">
+        <div className="rounded-xl dash-progress-panel p-4">
           <div className="flex items-center justify-between mb-3">
-            <span className="text-xs font-medium text-slate-400">Test Success Rate</span>
+            <span className="text-xs font-medium text-theme-secondary">Test Success Rate</span>
             <span className="text-sm font-bold text-green-400">
               <AnimatedCounter value={rate} suffix="%" duration={2} decimals={1} />
             </span>
           </div>
-          <div className="h-2.5 rounded-full bg-slate-800/80 overflow-hidden" role="progressbar" aria-valuenow={rate} aria-valuemin={0} aria-valuemax={100}>
+          <div className="h-2.5 rounded-full dash-progress-track overflow-hidden" role="progressbar" aria-valuenow={rate} aria-valuemin={0} aria-valuemax={100}>
             <motion.div
               initial={{ width: 0 }}
               whileInView={{ width: `${rate}%` }}
@@ -94,15 +88,15 @@ export default function TestExecutionDashboard() {
               className="h-full rounded-full bg-gradient-to-r from-green-500 via-emerald-400 to-teal-400 progress-glow"
             />
           </div>
-          <div className="flex justify-between mt-2 text-[10px] text-slate-600">
+          <div className="flex justify-between mt-2 text-[10px] text-theme-muted">
             <span>0%</span>
             <span>Target: 95%</span>
             <span>100%</span>
           </div>
         </div>
 
-        <div className="pt-1 border-t border-white/5">
-          <p className="text-[10px] font-semibold text-slate-500 uppercase tracking-wider mb-3">Tools &amp; Technologies</p>
+        <div className="pt-1 border-t border-theme-border">
+          <p className="text-[10px] font-semibold text-theme-muted uppercase tracking-wider mb-3">Tools &amp; Technologies</p>
           <div className="flex flex-wrap items-start justify-between gap-y-2 gap-x-1">
             {techTools.slice(0, 7).map((tool) => (
               <ToolItem key={tool.name} {...tool} />
